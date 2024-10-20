@@ -1,7 +1,9 @@
 <script setup>
   import mainNewComponent from './components/mainNewComponent.vue';
   import featuredNewsComponent from './components/featuredNewsComponent.vue';
-
+  import sliderCarrouselComponent from './components/sliderCarrouselComponent.vue';
+  import secondaryBannerComponent from './components/secondaryBannerComponent.vue'
+  import * as data from './data.js';
 </script>
 
 <template>
@@ -70,6 +72,25 @@
           </li>
         </ul>
       </nav>
+      <div class="header-icons-container">
+        <ul>
+          <li>
+            <a href="#">
+              <font-awesome-icon icon="magnifying-glass" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <font-awesome-icon icon="globe" />
+            </a>
+          </li> 
+          <li>
+            <a href="#">
+              <font-awesome-icon icon="user" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -97,9 +118,22 @@
       bannerText="Encuentra noticias, streamings en directo, resúmenes y los resultados en Uzbekistán"
       bannerLink="/"
       />
-
+    <sliderCarrouselComponent
+      :dataSet="data.obj1"
+    />
     <featuredNewsComponent/>
-
+    <sliderCarrouselComponent
+      :dataSet="data.obj2"
+    />
+    <sliderCarrouselComponent
+      :data-set="data.obj3"
+    />
+    <secondaryBannerComponent
+      bannerImg="https://digitalhub.fifa.com/transform/f226cf4b-830e-40d7-9054-934fe7a0f87f/Full-bleed-container-Inside-FIFA?&io=transform:fill,aspectratio:21x9,width:2880&quality=75"
+      bannerTitle="Copa Mundial de Futsal de la FIFA Uzbekistán 2024"
+      bannerText="Encuentra noticias, streamings en directo, resúmenes y los resultados en Uzbekistán"
+      bannerLink="/"
+    />
   </main>
 
   <footer>
@@ -112,11 +146,11 @@
     </div>
     <div class="social-container">
       <ul>
-        <li><a href="#"><span class="material-symbols-outlined">shop_two</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">shop_two</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">shop_two</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">shop_two</span></a></li>
-        <li><a href="#"><span class="material-symbols-outlined">shop_two</span></a></li>
+        <li><a href="#"><font-awesome-icon icon="fa-brands fa-x-twitter" /></a></li>
+        <li><a href="#"><font-awesome-icon icon="fa-brands fa-facebook-f" /></a></li>
+        <li><a href="#"><font-awesome-icon icon="fa-brands fa-instagram" /></a></li>
+        <li><a href="#"><font-awesome-icon icon="fa-brands fa-youtube" /></a></li>
+        <li><a href="#"><font-awesome-icon icon="fa-brands fa-tiktok" /></a></li>
       </ul>
     </div>
     <div class="footer-text">
